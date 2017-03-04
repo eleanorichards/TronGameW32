@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)Builds\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName).int\</IntDir>
+    <IncludePath>$(SolutionDir)Libs\SFML-2.4.2\include;$(SolutionDir)Code;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Libs\SFML-2.4.2\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SolutionDir)Code;$(SourcePath)</SourcePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>xcopy /i /e /s /y /f "$(SolutionDir)Libs\SFML-2.4.2\bin\*" "$(TargetDir)"
+xcopy /i /e /s /y /f "$(SolutionDir)Resources\*" "$(TargetDir)Resources\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Message>Copying DLLs</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
