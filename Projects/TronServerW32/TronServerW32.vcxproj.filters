@@ -26,10 +26,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Code\TronServerW32.cpp">
+    <ClCompile Include="..\..\Code\Server\stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Code\stdafx.cpp">
+    <ClCompile Include="..\..\Code\Server\TronServerW32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

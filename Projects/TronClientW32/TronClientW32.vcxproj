@@ -87,6 +87,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\Code\Client\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TronGameW32\TronGameW32.vcxproj">
+      <Project>{67f38015-b0c0-4330-8783-a65290e9a9ea}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

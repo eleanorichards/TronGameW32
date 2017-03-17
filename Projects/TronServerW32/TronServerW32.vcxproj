@@ -60,7 +60,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -91,6 +91,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\Code\Server\stdafx.cpp" />
     <ClCompile Include="..\..\Code\Server\TronServerW32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TronGameW32\TronGameW32.vcxproj">
+      <Project>{67f38015-b0c0-4330-8783-a65290e9a9ea}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
