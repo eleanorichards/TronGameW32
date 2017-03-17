@@ -26,6 +26,7 @@
 *.lo
 
 # Shared objects (inc. Windows DLLs)
+*.dll
 *.so
 *.so.*
 *.dylib
@@ -342,6 +343,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 
 # Libs folder
+!/Libs/**/[Bb]in
+!/Libs/**/[Bb]in/*.dll
 !/Libs/**/*.dll
 !/Libs/**/*.pdb
 !/Libs/**/*.lib
