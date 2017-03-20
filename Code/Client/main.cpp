@@ -21,7 +21,6 @@ void input(TcpClient& _client);
 int main()
 {
 	std::thread clientThread(client);
-	//std::thread thread(PollInput);
 
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
 	sf::CircleShape shape(100.f);
