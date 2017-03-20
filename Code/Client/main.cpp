@@ -74,6 +74,9 @@ void client()
 			status = socket.receive(packet);
 			if (status == sf::Socket::Done)
 			{
+				int header = 0;
+				packet >> header;
+
 				std::string message = "NULL";
 				
 				std::cin >> message;
